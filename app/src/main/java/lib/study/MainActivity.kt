@@ -7,6 +7,9 @@ import lib.study.util.formateFileSize
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var result: String
+        fun isInitial() = ::result.isInitialized
+
     companion object {
 
         private val TAG = "MainActivity"
@@ -16,6 +19,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d(TAG,"${formateFileSize(15582.0)}")
+
+        if(isInitial()) {
+            //do sth
+        }
 
 
     }
