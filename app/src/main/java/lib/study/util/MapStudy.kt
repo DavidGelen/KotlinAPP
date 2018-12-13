@@ -23,7 +23,8 @@ fun main(args: Array<String>) {
 }
 
 //中缀表示法
-//中缀调用首先必须满足一个条件就是函数的参数只有一个。然后再看这个函数的参与者是不是只有两个元素，这两个元素可以是两个数，可以是两个对象，可以是集合等。
+//中缀调用首先必须满足一个条件就是函数的参数只有一个。
+// 然后再看这个函数的参与者是不是只有两个元素，这两个元素可以是两个数，可以是两个对象，可以是集合等。
 private infix fun String.sameAs(strB: String): Boolean = strB == this
 private fun test13() {
     val strA = "A"

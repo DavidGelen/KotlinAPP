@@ -1,5 +1,7 @@
 package lib.study.util
 
+import lib.study.entity.Student
+
 
 /**
  * @name KotlinAPP
@@ -9,7 +11,7 @@ package lib.study.util
  * @class describe
  */
 
-val sum: (Int,Int,Int) -> (Int) = {a, b, c -> a + b + c}
+val sum: (Int, Int, Int) -> (Int) = { a, b, c -> a + b + c }
 
 var age: String? = "23"
 
@@ -34,6 +36,13 @@ fun <T> Any.joinString(
     postfix: String = ""
 ): String {
     return collection.joinToString(separator, prefix, postfix)
+}
+
+fun main(args: Array<String>) {
+    val student = Student("mikyou", 18, 99.0)
+    val (name, age, grade) = student//将一个student对象解构成一组3个单独的变量
+    println("my name is $name , I'm $age years old, I get $grade score")//解构后的3个变量可以脱离对象，直接单独使用
+
 }
 
 
