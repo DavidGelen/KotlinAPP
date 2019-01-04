@@ -1,9 +1,8 @@
 package lib.study
 
-import android.support.v7.app.AppCompatActivity
+import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
-import lib.study.util.formateFileSize
+import android.support.v7.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,8 +23,14 @@ class MainActivity : AppCompatActivity() {
             //do sth
         }
 
-        if (authorUrl.isNullOrBlank()) {
+        //判空要这样判
+        if (!authorUrl.isNullOrBlank()) {
         }
 
+        val dialog = Dialog(this)
+
+        dialog.run {
+
+        }
     }
 }
