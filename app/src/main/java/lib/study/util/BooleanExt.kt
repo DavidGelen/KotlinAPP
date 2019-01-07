@@ -32,10 +32,10 @@ inline fun <T> BooleanExt<T>.otherWise(block: () -> T): T = when(this) {
 
 val numberList = listOf(1,3,7,9,12,36,27,18)
 
-fun isOldList() = println(numberList
-    .filter { it % 2 == 1 }
-    .count()
-    .equals(numberList.size)
+fun isOldList() = println(
+    (numberList
+        .filter { it % 2 == 1 }
+        .count() == numberList.size)
     .yes { "奇数集合" }
     .otherWise { "非奇数集合" })
 
