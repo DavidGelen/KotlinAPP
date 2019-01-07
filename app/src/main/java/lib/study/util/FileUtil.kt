@@ -43,7 +43,7 @@ fun formateFileSize(size: Double): String {
 }
 
 //测试顶层函数，实际上Kotlin中main函数和Java不一样，它可以不存在任何类容器中，可以直接定义在一个Kotlin 文件中
-//另一方面也解释了Kotlin中的main函数不需要了static关键字，实际上它自己就是个顶层函数。
+//另一方面也解释了Kotlin中的main函数不需要static关键字，实际上它自己就是个顶层函数。
 fun main(args: Array<String>) {
     println("文件大小: ${formateFileSize(15582.0)}")
 }
