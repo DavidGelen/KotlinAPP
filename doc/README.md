@@ -30,7 +30,9 @@
 
 **Java中的ArrayList类和HashSet类实际上Kotlin中的MutableList和MutableSet集合接口的实现类**
 
+---
 
+**协程是一个异步调用的框架，解决了之前线程间协作代码繁琐的问题。**
 
 
 
