@@ -34,6 +34,18 @@
 
 **协程是一个异步调用的框架，解决了之前线程间协作代码繁琐的问题。**
 
+---
+
+private var onClickListener: ((View) -> Unit)? = null
+fun setOnClickListener(listener: (view: View) -> Unit) {
+    onClickListener = listener
+}
+
+// later, to invoke
+onClickListener?.invoke(this)
+
+
+
 
 
 
