@@ -1,9 +1,6 @@
 package lib.study.coroutine
 
-import kotlinx.coroutines.cancelAndJoin
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 
 /**
  * @name KotlinAPP
@@ -98,6 +95,15 @@ class Test {
             println("Hello,") // main coroutine continues here immediately
             delay(2000L)      // delaying for 2 seconds to keep JVM alive
         }
+    }
+
+    private fun main() {
+        GlobalScope.launch {//在后台启动一个新的协程并开始
+            delay(1000)//无阻塞等待1秒钟
+            println("world")//延迟后输出字符
+        }
+        println("Hello ")
+        Thread.sleep(2000)//阻塞主线程，保证主线程活着
     }
 
 }

@@ -4,12 +4,13 @@ import android.app.Dialog
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import lib.study.extension.TAG
 import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var result: String
-        fun isInitial() = ::result.isInitialized
+    fun isInitial() = ::result.isInitialized
 
     private var authorUrl: String? = null
 
@@ -20,14 +21,14 @@ class MainActivity : AppCompatActivity() {
     private var testurl: String = " "
 
     companion object {
-        private val TAG = "MainActivity"
+        //private val TAG = "MainActivity"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if(isInitial()) {
+        if (isInitial()) {
             //do sth
         }
 
@@ -42,12 +43,13 @@ class MainActivity : AppCompatActivity() {
             showText.text = "isNullOrEmpty 不成立"
         }*/
 
-        if(testurl.isNullOrBlank()) {
+        if (testurl.isNullOrBlank()) {
             showText.text = "isNullOrBlank 成立"
         } else {
             showText.text = "isNullOrBlank 不成立"
         }
 
+        MainActivity.TAG()
 
     }
 }

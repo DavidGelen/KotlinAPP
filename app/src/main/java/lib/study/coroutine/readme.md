@@ -21,3 +21,17 @@
         2.async用于启动一个异步的协程任务，await用于去得到协程任务结束时返回的结果，结果是通过一个Deferred对象返回的。
 
 [协程具体的文档在这](https://github.com/Kotlin/kotlinx.coroutines/blob/master/coroutines-guide.md)
+
+---
+
+你可以使用一些协程操作来替换一些线程操作，
+比如：用GlobalScope.launch{...}替换thread{...},
+用delay(...)替换Thread.sleep(...)。
+
+---
+
+在协程中使用GlobalScope.launch{...}表示非阻塞的协程，使用runBlocking{...}来表示阻塞的协程
+
+---
+
+[学习链接：](https://blog.csdn.net/a296777513/article/details/85231013)
