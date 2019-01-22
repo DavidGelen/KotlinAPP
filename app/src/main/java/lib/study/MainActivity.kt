@@ -1,10 +1,10 @@
 package lib.study
 
-import android.app.Dialog
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import lib.study.extension.TAG
+import lib.study.util.kotlinDSL
 import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity() {
@@ -50,6 +50,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         MainActivity.TAG()
+
+    }
+
+    private fun test1() {
+        // 调用高阶函数
+        kotlinDSL {
+            // 这个 lambda 的接收者类型为StringBuilder
+            append(" DSL")
+            println(this)
+        }
 
     }
 }

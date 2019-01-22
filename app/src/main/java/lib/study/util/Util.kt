@@ -9,4 +9,11 @@ package lib.study.util
  */
 
 
+// 声明接收者
+fun kotlinDSL(block:StringBuilder.()->Unit){
+    block(StringBuilder("Kotlin"))
+}
+
+
+
 

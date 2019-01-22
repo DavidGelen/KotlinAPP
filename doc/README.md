@@ -44,6 +44,24 @@ fun setOnClickListener(listener: (view: View) -> Unit) {
 // later, to invoke
 onClickListener?.invoke(this)
 
+---
+
+class Outer{
+
+    class Inner{ // 静态成员类，等价于public final class Outer
+
+    }
+
+    inner class OtherInner{ // 非静态成员类
+
+        fun action(){
+            // 调用外部类实例
+            this@Outer.toString()
+        }
+    }
+}
+
+
 
 
 
