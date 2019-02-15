@@ -8,9 +8,8 @@ package lib.study.util
  * @class describe
  */
 
-
 // 声明接收者
-fun kotlinDSL(block:StringBuilder.()->Unit){
+fun kotlinDSL(block: StringBuilder.() -> Unit) {
     block(StringBuilder("Kotlin"))
 }
 

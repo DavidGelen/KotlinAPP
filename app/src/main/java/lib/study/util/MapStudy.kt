@@ -19,6 +19,12 @@ fun main(args: Array<String>) {
     map.forEach { key, value ->
         println("key: $key   value:$value")
     }
+
+    for((key,value) in map) {
+        if(2 == key) {
+
+        }
+    }
 }
 
 

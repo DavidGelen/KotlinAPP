@@ -3,8 +3,6 @@ package lib.study.util
 import android.content.Intent
 import lib.study.entity.Student
 import java.io.Serializable
-
-
 /**
  * @name KotlinAPP
  * @class name：lib.study.util
@@ -12,7 +10,6 @@ import java.io.Serializable
  * @time 2018/12/13 22:45
  * @class describe
  */
-
 val sum: (Int, Int, Int) -> (Int) = { a, b, c -> a + b + c }
 
 var age: String? = "23"

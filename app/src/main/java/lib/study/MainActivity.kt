@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import lib.study.extension.TAG
+import lib.study.util.NumPrint
 import lib.study.util.kotlinDSL
 import kotlin.properties.Delegates
 
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     var count: Int by Delegates.notNull<Int>()
     var name: String by Delegates.notNull<String>()
 
-    private var testurl: String = " "
+    private var testurl: String = ""
 
     companion object {
         //private val TAG = "MainActivity"
@@ -44,13 +45,14 @@ class MainActivity : AppCompatActivity() {
         }*/
 
         if (testurl.isNullOrBlank()) {
-            showText.text = "isNullOrBlank 成立"
+           // showText.text = "isNullOrBlank 成立"
         } else {
             showText.text = "isNullOrBlank 不成立"
         }
 
-        MainActivity.TAG()
+        //MainActivity.TAG()
 
+        test4()
     }
 
     private fun test1() {
@@ -61,5 +63,33 @@ class MainActivity : AppCompatActivity() {
             println(this)
         }
 
+    }
+
+    private fun test2() {
+        val datas = listOf(1,2,3,4).minus(2)
+        //print(datas)
+        showText.text = datas.toString() //1,3,4
+    }
+
+    private fun test3() {
+        val oddNum: NumPrint = {
+            if (it % 2 == 1) {
+                showText.text = "$it"
+            } else {
+                showText.text = "is not a odd num"
+            }
+        }
+
+        oddNum.invoke(100)
+    }
+
+    private fun test4() {
+        val map = mapOf(Pair(1, "A"), Pair(2, "B"), Pair(3, "C"))
+        for((key,value) in map) {
+            if(2 == key) {
+                showText.text = value
+                break
+            }
+        }
     }
 }

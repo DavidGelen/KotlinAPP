@@ -7,7 +7,7 @@ package lib.study.util
  * @time 2018/12/13 23:13
  * @class describe
  */
-abstract  class Shape(val sides: List<Double>) {
+abstract class Shape(val sides: List<Double>) {
 
     val perimeter: Double
         get() = sides.sum()

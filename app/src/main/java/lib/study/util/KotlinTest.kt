@@ -69,10 +69,14 @@ class KotlinTest {
     }*/
 
     //拒绝啰嗦代码，可以这么写
-    /*fun main(args: Array<String>) {
-        val persons = listOf(Person(name = "Alice", age = 18), Person(name = "Mikyou", age = 20), Person(name = "Bob", age = 16))
-        println(persons.maxBy(Person::age))//成员引用的类型和maxBy传入的lambda表达式类型一致
-    }*/
+    fun main(args: Array<String>) {
+        //val persons = listOf(Person(name = "Alice", age = 18), Person(name = "Mikyou", age = 20), Person(name = "Bob", age = 16))
+        //println(persons.maxBy(Person::age))//成员引用的类型和maxBy传入的lambda表达式类型一致
+
+        //val datas = listOf(1,2,3,4)
+        //datas.minus(2)
+        //print(datas)
+    }
 
     /*fun salute() = print("salute")
 
